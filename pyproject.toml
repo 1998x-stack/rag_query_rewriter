@@ -1,0 +1,26 @@
+[project]
+name = "rag-query-rewriter"
+version = "0.2.0"
+description = "Industrial-grade RAG query rewriting toolkit with routing, PRF, MultiQuery, HyDE, Self-Querying, RRF/MMR, and parallel retrieval."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "You" }]
+
+dependencies = [
+  "loguru>=0.7.2",
+  "pydantic>=2.7.0",
+  "regex>=2024.5.15",
+  "dateparser>=1.2.0",
+  "scikit-learn>=1.4.0",
+  "numpy>=1.26.0",
+  "pyyaml>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0"]
+
+[tool.ruff]
+line-length = 100
+
+[project.scripts]
+rqw = "cli:main"
